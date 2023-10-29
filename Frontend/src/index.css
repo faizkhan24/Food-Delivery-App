@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Montserrat:wght@600&family=Mulish:wght@300;400&family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Montserrat:wght@600&family=Mulish:wght@300;400&family=Roboto&display=swap");
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -14,7 +14,6 @@ code {
     monospace;
 }
 
-
 .dropdown {
   margin-right: 1.5rem;
   display: inline-block;
@@ -25,7 +24,7 @@ code {
   position: absolute;
   background-color: #f9f9f9;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 105;
 }
 
@@ -37,7 +36,9 @@ code {
   z-index: 105;
 }
 
-.dropdown-content a:hover {background-color: #f1f1f1}
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
 
 .dropdown:hover .dropdown-content {
   display: block;
@@ -47,7 +48,7 @@ code {
   background-color: #3e8e41;
 }
 
-.card-section{
+.card-section {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -58,7 +59,7 @@ code {
   width: 100vw;
   height: 100vh;
   position: absolute;
-  background: #FC3164;
+  background: #fc3164;
   /* transition: 1.5s cubic-bezier(0.68, -0.15, 0.265, 1.35); */
 }
 
@@ -92,7 +93,7 @@ code {
   left: calc(27% - 2rem / 2);
   background: white;
   border-radius: 2rem;
-  background: #FC3164;
+  background: #fc3164;
   cursor: pointer;
   transform: rotate(0deg);
   transform-origin: 130% 115%;
@@ -106,7 +107,6 @@ code {
   transform-origin: 130% 150%;
 }
 
-
 .custom-column {
   /* width: 33.33%; Set the width to create a 3-column layout */
   float: left; /* Float the columns to make them inline */
@@ -115,16 +115,15 @@ code {
 }
 
 .item-heading {
-font-size: 17px;
-/* line-height: 20px; */
-text-align: start;
-letter-spacing: 0.3px;
-margin-top: 10px;
-margin-left: 8px;
-
+  font-size: 17px;
+  /* line-height: 20px; */
+  text-align: start;
+  letter-spacing: 0.3px;
+  margin-top: 10px;
+  margin-left: 8px;
 }
 
-.item-desc{
+.item-desc {
   font-family: sans-serif;
   font-weight: lighter;
   font-size: 13px;
@@ -141,8 +140,8 @@ margin-left: 8px;
 }
 /* .flex-container {
   display: flex;
-  /* justify-content: space-between; */
-/* } */ */
+  justify-content: space-between;
+ } */
 .varients {
   width: 100%;
   margin: 0.25rem;
@@ -158,7 +157,6 @@ margin-left: 8px;
 .Quantity p {
   margin: 10px;
 }
-
 
 .flex-container2 {
   display: flex;
@@ -182,24 +180,20 @@ margin-left: 8px;
   font-weight: 900;
   color: #f22e3e;
 }
-.btn:hover{
+.btn:hover {
   background-color: #f22e3e;
   color: #ffffff;
   transition: 0.75s all;
 }
-.add-to-cart{
+.add-to-cart {
   text-align: center;
 }
-
-
-
-
 
 .price {
   /* margin: 0.25rem; */
   /* width: 100%; */
-   font-size: 20px;
-   margin-left: 10px;
+  font-size: 20px;
+  margin-left: 10px;
 }
 
 .form-control {
@@ -219,8 +213,8 @@ select {
   border-color: black;
 }
 
-.pizza-container{
-  /* margin: 100px; */ 
+.pizza-container {
+  /* margin: 100px; */
   display: flex;
   flex-wrap: wrap;
   margin: 50px;
@@ -232,29 +226,29 @@ select {
   border-radius: 12px 12px 12px 12px;
   position: relative;
 }
-.pizza-container:hover{
+.pizza-container:hover {
   transform: scale(1);
   transition: 1s all;
 }
 
-.head-container{
- display: flex;
+.head-container {
+  display: flex;
   justify-content: space-between;
   align-items: center;
   max-width: 287px;
-    max-height: 31px;
+  max-height: 31px;
 }
 
-.cuisine-btn{
+.cuisine-btn {
   border: none;
   background: transparent;
 }
-.cuisine-btn:hover{
+.cuisine-btn:hover {
   transform: scale(1.05);
   transition: 100ms all;
 }
 
-.quantity-controls{
+.quantity-controls {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -266,7 +260,7 @@ select {
   background-position: 0 0;
   border-radius: 3px;
 }
-.decrement{
+.decrement {
   width: 31px;
   height: 30px;
   background: transparent;
@@ -274,7 +268,7 @@ select {
   border: none;
   font-size: 27px;
 }
-.increment{
+.increment {
   width: 31px;
   height: 30px;
   background: transparent;
@@ -282,7 +276,7 @@ select {
   border: none;
   font-size: 27px;
 }
-.quantity{
+.quantity {
   color: #111111;
 }
 /* @media screen and (max-width: 1800px) {
@@ -390,76 +384,68 @@ select {
 } */
 
 @media screen and (max-width: 1670px) {
-
-  .nav-bar{
+  .nav-bar {
     width: 108rem;
   }
-  .nav-container{
+  .nav-container {
     width: 108rem;
   }
 
-  .slider{
+  .slider {
     max-width: 95%;
     position: relative;
     left: 2%;
   }
-  .cuisine{
+  .cuisine {
     /* display: flex; */
     /* flex-wrap: wrap; */
     position: relative;
     left: 2%;
   }
-  
 }
 
 @media screen and (max-width: 1600px) {
-
-  .nav-bar{
+  .nav-bar {
     width: 108rem;
   }
-  .nav-container{
+  .nav-container {
     width: 108rem;
   }
 
-  .slider{
+  .slider {
     max-width: 95%;
     position: relative;
     left: 4%;
   }
-  .cuisine{
+  .cuisine {
     /* display: flex; */
     /* flex-wrap: wrap; */
     position: relative;
     left: 4%;
   }
-  
 }
 
 @media screen and (max-width: 1550px) {
-
-  .nav-bar{
+  .nav-bar {
     width: 108rem;
   }
-  .nav-container{
+  .nav-container {
     width: 108rem;
   }
 
-  .slider{
+  .slider {
     max-width: 97%;
     position: relative;
     left: 6%;
   }
-  .cuisine{
+  .cuisine {
     position: relative;
     left: 6%;
     display: flex;
     flex-wrap: wrap;
-    
   }
-  .card-section{
+  .card-section {
     position: relative;
     left: 6%;
   }
-  
 }
-
