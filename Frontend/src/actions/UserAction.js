@@ -1,5 +1,6 @@
 import axios from "axios";
 
+
 // Assuming you want to pass the 'user' object as an argument
 export const registerUser = (user) => async (dispatch) => {
   dispatch({ type: "USER_REGISTER_REQUEST" });
