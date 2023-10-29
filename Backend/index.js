@@ -16,9 +16,9 @@ app.use("/api/dishes", dishesRoute);
 app.use("/api/users", userRoute);
 app.use("/api/users", userRoute);
 
-app.get("/", (req, res) => {
-  res.send("Server working on port " + port);
-});
+// app.get("/", (req, res) => {
+//   res.send("Server working on port " + port);
+// });
 
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
