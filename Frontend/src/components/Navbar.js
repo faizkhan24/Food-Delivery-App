@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import "../components/style.css";
-// import '../components/MoreDropDown.css'
+import "../components/MoreDropDown.css";
 import "../App.css";
 import "../components/Cart.css";
 import { Link, NavLink } from "react-router-dom";
@@ -8,7 +8,7 @@ import Searchbar from "./Searchbar";
 import CartPage from "../screens/CartPage";
 import Loading from "../screens/Loading";
 import { burger } from "../itemsData";
-// import DropdownMenu from "./DropdownMenu";
+import DropdownMenu from "./DropdownMenu";
 import { useDispatch, useSelector } from "react-redux";
 import {
   clearItem,
@@ -21,24 +21,25 @@ import {
 import RegisterScreen from "../screens/RegisterScreen";
 import LoginModal from "../screens/LoginModal";
 import LogoutToggle from "./LogoutToggle";
-
+import MoreDropdown from "../components/MoreDropDown";
 
 export default function Navbar({ cartItems, cartItemsName }) {
   const [color, setColor] = useState(false);
   const [cart, setCart] = useState(false);
   const [opendropDown, setDropDown] = useState(false);
   const [totalCartQuantity, setTotalCartQuantity] = useState(0);
+  const userState = useSelector((state) => state.loginUserReducer);
+  const { currentUser } = userState;
 
+  // const handleRegistrationClick = () => {
+  //   setShowRegistrationModal(!showRegistrationModal);
+  //   document.body.style.overflow = showRegistrationModal ? "auto" : "hidden";
+  // };
 
-  const handleRegistrationClick = () => {
-    setShowRegistrationModal(!showRegistrationModal);
-    document.body.style.overflow = showRegistrationModal ? "auto" : "hidden";
-  };
-
-  const handleLoginButtonClick = () => {
-    setShowRegistrationModal(true);
-    document.body.style.overflow = "hidden";
-  };
+  // const handleLoginButtonClick = () => {
+  //   setShowRegistrationModal(true);
+  //   document.body.style.overflow = "hidden";
+  // };
   const dispatch = useDispatch();
   const CartItems = useSelector((store) => store.cart.items);
 
@@ -270,15 +271,15 @@ export default function Navbar({ cartItems, cartItemsName }) {
                 <li className="item-with-div">
                   SHOP<div className="div-style"></div>
                 </li>
-                <li className="more-drop-list" >
-                <div class="dropdown">
-  <button class="dropbtn">MORE</button>
-  <div class="dropdown-content">
-  <a href="#">Link 1</a>
-  <a href="#">Link 2</a>
-  <a href="#">Link 3</a>
-  </div>
-</div>
+                <li className="more-drop-list">
+                  <div class="dropdown">
+                    <button class="dropbtn">MORE</button>
+                    <div class="dropdown-content">
+                      <a href="#">Link 1</a>
+                      <a href="#">Link 2</a>
+                      <a href="#">Link 3</a>
+                    </div>
+                  </div>
                 </li>
 
                 <NavLink style={{ textDecoration: "none" }} to={"/Contact Us"}>
@@ -291,9 +292,7 @@ export default function Navbar({ cartItems, cartItemsName }) {
                   <LogoutToggle></LogoutToggle>
                 ) : (
                   <li className="item-with-div">
-                    <button className="login-btn">
-                      LOGIN
-                    </button>
+                    <button className="login-btn">LOGIN</button>
                   </li>
                 )}
               </ul>
