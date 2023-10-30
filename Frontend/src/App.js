@@ -33,7 +33,7 @@ function App() {
           <Navbar cartItems={cart} />
           <Routes>
             <Route
-              path="/"
+              path="/Homepage"
               element={<Homepage setTotalCartQuantity={updateCart} />}
             />
             <Route path="/Rolls" element={<RollsPage />} />
