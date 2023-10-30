@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import '../components/LogoutPage.css'
 import RegisterScreen from '../screens/RegisterScreen'
+import LoginModal from '../screens/LoginModal'
 const LogoutPage = () => {
   const [showRegistrationModal, setShowRegistrationModal] = useState(false);
   const [showLoginModal, setShowLoginModal] = useState(false);
