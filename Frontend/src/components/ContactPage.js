@@ -14,7 +14,7 @@ const ContactPage = () => {
         <img className='olive-img' src='https://themes.templatescoder.com/pizzon/html/demo/1-2/01-Modern/images/black-jamun.png'></img>
         <img className='onion-img' src='https://themes.templatescoder.com/pizzon/html/demo/1-2/01-Modern/images/onion.png'></img>
         <img className='tamato-img' src='https://themes.templatescoder.com/pizzon/html/demo/1-2/01-Modern/images/tamato.png'></img>
-        <img className='leaf-img' src='https://themes.templatescoder.com/pizzon/html/demo/1-2/01-Modern/images/banner-leaf.png'></img> 
+        <img className='leaf-img' src='https://themes.templatescoder.com/pizzon/html/demo/1-2/01-Modern/images/banner-leaf.png'   style={{ position: "absolute" }}></img> 
          </div> 
        <div className='sub-heading-container'>
        <h2 className='sub-heading'>Consultation</h2>
