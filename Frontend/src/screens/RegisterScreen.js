@@ -18,11 +18,11 @@ const RegisterScreen = ({ showRegistrationModal, setShowRegistrationModal }) => 
   const loginstate = useSelector(state=>state.loginUserReducer)
   const {loginloading, loginerror} = loginstate;
 
-  // useEffect(()=>{
-  //   if(localStorage.getItem('currentUser')) {
-  //     window.location.href='/'
-  //   }
-  // })
+  useEffect(()=>{
+    if(localStorage.getItem('currentUser')) {
+      window.location.href='/Homepage'
+    }
+  })
 
   const dispatch = useDispatch();
 
