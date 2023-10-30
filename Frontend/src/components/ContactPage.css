@@ -61,8 +61,8 @@ top: 12rem;
 }
 .leaf-img{
     position: absolute;
-    right: 0;
-    top: 4rem;
+    right: -2rem;
+    top: 1rem;
 }
 .sub-heading-container{
     width: 100%;
