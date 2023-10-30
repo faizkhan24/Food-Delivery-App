@@ -21,7 +21,7 @@ import {
 import RegisterScreen from "../screens/RegisterScreen";
 import LoginModal from "../screens/LoginModal";
 import LogoutToggle from "./LogoutToggle";
-import MoreDropdown from "./MoreDropdown";
+
 
 export default function Navbar({ cartItems, cartItemsName }) {
   const [color, setColor] = useState(false);
