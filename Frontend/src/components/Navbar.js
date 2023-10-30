@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import "../components/style.css";
+import '../components/MoreDropDown.css'
 import "../App.css";
 import "../components/Cart.css";
 import { Link, NavLink } from "react-router-dom";
@@ -20,14 +21,13 @@ import {
 import RegisterScreen from "../screens/RegisterScreen";
 import LoginModal from "../screens/LoginModal";
 import LogoutToggle from "./LogoutToggle";
+import MoreDropdown from "./MoreDropdown";
 
 export default function Navbar({ cartItems, cartItemsName }) {
   const [color, setColor] = useState(false);
   const [cart, setCart] = useState(false);
   const [opendropDown, setDropDown] = useState(false);
   const [totalCartQuantity, setTotalCartQuantity] = useState(0);
-  const [showRegistrationModal, setShowRegistrationModal] = useState(false);
-  const [showLoginModal, setShowLoginModal] = useState(false);
   const userState = useSelector((state) => state.loginUserReducer);
   const { currentUser } = userState;
 
@@ -75,20 +75,10 @@ export default function Navbar({ cartItems, cartItemsName }) {
     return subtotal;
   };
 
-  const dropdownRef = useRef(null);
-
-  const handleMouseEnter = () => {
-    setDropDown(true);
-  };
-
-  const handleMouseLeave = () => {
-    setDropDown(false);
-  };
-
-  const handleLoginClick = () => {
-    setShowRegistrationModal(true);
-    document.body.style.overflow = "hidden";
-  };
+  // const handleLoginClick = () => {
+  //   setShowRegistrationModal(true);
+  //   document.body.style.overflow = "hidden";
+  // };
 
   const handleCartClick = () => {
     setCart(true);
@@ -281,14 +271,16 @@ export default function Navbar({ cartItems, cartItemsName }) {
                 <li className="item-with-div">
                   SHOP<div className="div-style"></div>
                 </li>
-                <li
-                  className="item-with-div"
-                  onMouseEnter={handleMouseEnter}
-                  onMouseLeave={handleMouseLeave}
-                >
-                  MORE<div className="div-style"></div>
+                <li className="more-drop-list" >
+                <div class="dropdown">
+  <button class="dropbtn">MORE</button>
+  <div class="dropdown-content">
+  <a href="#">Link 1</a>
+  <a href="#">Link 2</a>
+  <a href="#">Link 3</a>
+  </div>
+</div>
                 </li>
-                {opendropDown && <DropdownMenu ref={dropdownRef} />}
 
                 <NavLink style={{ textDecoration: "none" }} to={"/Contact Us"}>
                   <li className="item-with-div">
@@ -297,10 +289,10 @@ export default function Navbar({ cartItems, cartItemsName }) {
                 </NavLink>
 
                 {currentUser ? (
-                 <LogoutToggle></LogoutToggle>
+                  <LogoutToggle></LogoutToggle>
                 ) : (
                   <li className="item-with-div">
-                    <button onClick={handleLoginClick} className="login-btn">
+                    <button className="login-btn">
                       LOGIN
                     </button>
                   </li>
@@ -331,7 +323,16 @@ export default function Navbar({ cartItems, cartItemsName }) {
               />
             </div>
             {/* Registration Modal */}
-         
+            {/* <RegisterScreen
+              showRegistrationModal={showRegistrationModal}
+              setShowRegistrationModal={() =>
+                setShowRegistrationModal(!showRegistrationModal)
+              }
+              closeModals={() => {
+                setShowRegistrationModal(false);
+                document.body.style.overflow = "auto";
+              }}
+            /> */}
           </nav>
         </div>
       </div>
