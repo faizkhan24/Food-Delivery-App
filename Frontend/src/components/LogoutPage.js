@@ -1,39 +1,58 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
-import '../components/LogoutPage.css'
-import RegisterScreen from '../screens/RegisterScreen'
-import LoginModal from '../screens/LoginModal'
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import '../components/LogoutPage.css';
+import RegisterScreen from '../screens/RegisterScreen';
+import LoginModal from '../screens/LoginModal';
+import { useSelector } from 'react-redux';
+import LogoutToggle from './LogoutToggle';
+
 const LogoutPage = () => {
   const [showRegistrationModal, setShowRegistrationModal] = useState(false);
   const [showLoginModal, setShowLoginModal] = useState(false);
-  
+  const userState = useSelector((state) => state.loginUserReducer);
+  const { currentUser } = userState;
 
   const handleLoginClick = () => {
+    setShowRegistrationModal(true);
+    document.body.style.overflow = 'hidden';
+  };
 
-    
+  const handleRegistrationClick = () => {
+    setShowRegistrationModal(!showRegistrationModal);
+    document.body.style.overflow = showRegistrationModal ? "auto" : "hidden";
+  };
+
+  const handleLoginButtonClick = () => {
     setShowRegistrationModal(true);
     document.body.style.overflow = "hidden";
   };
 
   return (
-    
-          <div className='logout-container'>
+    <div className='logout-container'>
       <nav className='navbar'>
-      <img className='tomato-img' src='https://themes.templatescoder.com/pizzon/html/demo/1-2/01-Modern/images/header-img.png'></img>
-      <img className="logo" src="./images/logo02.png" alt="Logo" />
-     <ul className='nav-items'>
-     <li className="item-with-div">
-                  ABOUT<div className="div-style"></div>
-                </li>
-      <li>
-      <button  onClick={handleLoginClick} className='login-btn'>
-      LOGIN
-      </button>
-      
-      </li>
-     </ul>
+        <img
+          className='tomato-img'
+          src='https://themes.templatescoder.com/pizzon/html/demo/1-2/01-Modern/images/header-img.png'
+        ></img>
+        <img className='logo' src='./images/logo02.png' alt='Logo' />
+        <ul className='nav-items'>
+          <li className='item-with-div'>
+            ABOUT<div className='div-style'></div>
+          </li>
+          <li>
+              {currentUser ? (
+                  <LogoutToggle></LogoutToggle>
+                ) : (
+                  <li className="item-with-div">
+                    <button onClick={handleLoginClick}  className="login-btn">
+                      LOGIN
+                    </button>
+                  </li>
+                )}
+          </li>
+        </ul>
       </nav>
-      <div className='hero-section'>
+         <div className='hero-section'>
       <div>
          <h1 className='heading'>Handmade, With an Extra Pinch of 
          <span className='love-text'>Love</span> </h1>
@@ -75,26 +94,22 @@ const LogoutPage = () => {
       </div>
 
       <LoginModal
-                showLoginModal={showLoginModal}
-                closeLoginModal={() => setShowLoginModal(false)}
-              />
+        showLoginModal={showLoginModal}
+        closeLoginModal={() => setShowLoginModal(false)}
+      />
 
       <RegisterScreen
-              showRegistrationModal={showRegistrationModal}
-              setShowRegistrationModal={() =>
-                setShowRegistrationModal(!showRegistrationModal)
-              }
-              closeModals={() => {
-                setShowRegistrationModal(false);
-                document.body.style.overflow = "auto";
-              }}
-            />
-      
-    </div>  
-    
-   
+        showRegistrationModal={showRegistrationModal}
+        setShowRegistrationModal={() =>
+          setShowRegistrationModal(!showRegistrationModal)
+        }
+        closeModals={() => {
+          setShowRegistrationModal(false);
+          document.body.style.overflow = 'auto';
+        }}
+      />
+    </div>
+  );
+};
 
-  )
-}
-
-export default LogoutPage
+export default LogoutPage;
