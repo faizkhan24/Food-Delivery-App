@@ -259,7 +259,7 @@ export default function Navbar({ cartItems, cartItemsName }) {
               <ul className="nav-items">
                 <NavLink
                   style={{ textDecoration: "none" }}
-                  to="/"
+                  to="/Homepage"
                   exact
                   activeClassName="active-link"
                 >
