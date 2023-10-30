@@ -28,8 +28,7 @@ export default function Navbar({ cartItems, cartItemsName }) {
   const [cart, setCart] = useState(false);
   const [opendropDown, setDropDown] = useState(false);
   const [totalCartQuantity, setTotalCartQuantity] = useState(0);
-  const userState = useSelector((state) => state.loginUserReducer);
-  const { currentUser } = userState;
+
 
   const handleRegistrationClick = () => {
     setShowRegistrationModal(!showRegistrationModal);
