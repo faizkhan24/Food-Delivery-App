@@ -308,10 +308,10 @@ export default function Navbar({ cartItems, cartItemsName }) {
               </ul>
 
               {/* Login Modal */}
-              <LoginModal
+              {/* <LoginModal
                 showLoginModal={showLoginModal}
                 closeLoginModal={() => setShowLoginModal(false)}
-              />
+              /> */}
 
               <div className="cart-container">
                 <div className="cart-count">{totalCartQuantity}</div>
@@ -331,16 +331,7 @@ export default function Navbar({ cartItems, cartItemsName }) {
               />
             </div>
             {/* Registration Modal */}
-            <RegisterScreen
-              showRegistrationModal={showRegistrationModal}
-              setShowRegistrationModal={() =>
-                setShowRegistrationModal(!showRegistrationModal)
-              }
-              closeModals={() => {
-                setShowRegistrationModal(false);
-                document.body.style.overflow = "auto";
-              }}
-            />
+         
           </nav>
         </div>
       </div>

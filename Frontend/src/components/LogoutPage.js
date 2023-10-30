@@ -4,6 +4,8 @@ import '../components/LogoutPage.css'
 import RegisterScreen from '../screens/RegisterScreen'
 const LogoutPage = () => {
   const [showRegistrationModal, setShowRegistrationModal] = useState(false);
+  const [showLoginModal, setShowLoginModal] = useState(false);
+  
 
   const handleLoginClick = () => {
 
@@ -70,6 +72,22 @@ const LogoutPage = () => {
           <img src='https://themes.templatescoder.com/pizzon/html/demo/1-2/01-Modern/images/daily-fresh-vacter.png'></img>
         </div>
       </div>
+
+      <LoginModal
+                showLoginModal={showLoginModal}
+                closeLoginModal={() => setShowLoginModal(false)}
+              />
+
+      <RegisterScreen
+              showRegistrationModal={showRegistrationModal}
+              setShowRegistrationModal={() =>
+                setShowRegistrationModal(!showRegistrationModal)
+              }
+              closeModals={() => {
+                setShowRegistrationModal(false);
+                document.body.style.overflow = "auto";
+              }}
+            />
       
     </div>  
     
