@@ -12,30 +12,33 @@ import { Provider } from "react-redux";
 import store from "./store/store";
 import Module from "./components/Module";
 import RegisterScreen from "./screens/RegisterScreen";
+import LogoutPage from "./components/LogoutPage";
 
 function App() {
   const [cart, setCart] = useState([]);
-  
+
   // Function to update the cart state
   const updateCart = (newCart) => {
     setCart(newCart);
   };
   return (
     <div className="App">
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<LogoutPage />} />
+        </Routes>
+      </BrowserRouter>
       <Provider store={store}>
         <BrowserRouter>
-          <Navbar
-            cartItems={cart}
-          />
+          <Navbar cartItems={cart} />
           <Routes>
             <Route
               path="/"
-              element={<Homepage  setTotalCartQuantity={updateCart}/>}
+              element={<Homepage setTotalCartQuantity={updateCart} />}
             />
             <Route path="/Rolls" element={<RollsPage />} />
             <Route path="/Contact Us" element={<ContactPage />} />
             <Route path="/Register" element={<RegisterScreen />} />
-
           </Routes>
           <Footer />
           <GoToTop />
