@@ -256,7 +256,8 @@ export default function Navbar({ cartItems, cartItemsName }) {
             </div>
             <div className="nav-items-container">
               <Searchbar />
-              <ul className="nav-items" style={{marginRight: 0}}>
+              <ul className="nav-items" style={{ marginRight: 0, gap: '3rem' }}>
+
                 <NavLink
                   style={{ textDecoration: "none" }}
                   to="/Homepage"
