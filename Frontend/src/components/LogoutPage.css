@@ -1,3 +1,6 @@
+body{
+    zoom: 100%;
+}
 .logout-container{
     position: absolute;
     height: 100vh;
