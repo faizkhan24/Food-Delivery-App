@@ -1,6 +1,3 @@
-body{
-    zoom: 100%;
-}
 .logout-container{
     position: absolute;
     height: 100vh;
@@ -80,13 +77,15 @@ li{
 
 .leaf-img{
     position: relative;
-    right: -2rem;
-    top: 1rem;
+    right: 9rem;
+    top: -4rem;
 }
-.pizza-img{
+.pizza-image{
     position: absolute;
-    right: 19rem;
+    right: 16rem;
     top: 12rem;
+    width: 490px;
+    height: 507px;
 }
 
 .heading{
@@ -153,7 +152,7 @@ margin-left: 1rem;
     right: 4rem;
 }
 
-.onion-img{
+.onion-image{
     position: absolute;
     top: 53rem;
     left: 54rem;
@@ -186,5 +185,5 @@ margin-left: 1rem;
 
 .garlic-img{
     position: absolute;
-    right: 42rem;
+    right: 14rem;
 }

@@ -64,10 +64,10 @@ const LogoutPage = () => {
         
       </div>
       <div className='leaf-img'>
-        <img src='https://themes.templatescoder.com/pizzon/html/demo/1-2/01-Modern/images/home-leaf.png'></img>
+        <img src='https://themes.templatescoder.com/pizzon/html/demo/1-2/01-Modern/images/home-leaf.png' style={{width: '220px', height:"348px"}}></img>
       </div>
-       <div className='pizza-img'>
-        <img src='https://themes.templatescoder.com/pizzon/html/demo/1-2/01-Modern/images/banner-img.png'></img>
+       <div className='pizza-image'>
+        <img src='https://themes.templatescoder.com/pizzon/html/demo/1-2/01-Modern/images/banner-img.png' style={{width: "490px", height:"507px"}}></img>
        </div>
        <div className='logo-img'>
         <img src='https://themes.templatescoder.com/pizzon/html/demo/1-2/01-Modern/images/buy-one-get.png'></img>
@@ -76,20 +76,20 @@ const LogoutPage = () => {
         <div ></div>
        </div>
        <div className='pizza2-img'>
-        <img src='https://themes.templatescoder.com/pizzon/html/demo/1-2/01-Modern/images/banner-img-bottom.png'></img>
+        <img src='https://themes.templatescoder.com/pizzon/html/demo/1-2/01-Modern/images/banner-img-bottom.png' style={{width: "286px", height:"294px"}}></img>
        </div>
-       <div className='onion-img'>
+       <div className='onion-image'>
         <img src='https://themes.templatescoder.com/pizzon/html/demo/1-2/01-Modern/images/onion.png'></img>
        </div>
       </div>
 
       
       <div className='section-2'>
-        <img src='https://themes.templatescoder.com/pizzon/html/demo/1-2/01-Modern/images/daily-fresh.png'></img>
+        <img src='https://themes.templatescoder.com/pizzon/html/demo/1-2/01-Modern/images/daily-fresh.png' style={{width: "409px", height:"402px"}}></img>
         <p className='para2'>Daily fresh and always tasty</p>
         <p className='para3'>There are many variations of passages of Lorem Ipsum available, but the majority haved</p>
         <div className='garlic-img'>
-          <img src='https://themes.templatescoder.com/pizzon/html/demo/1-2/01-Modern/images/daily-fresh-vacter.png'></img>
+          <img src='https://themes.templatescoder.com/pizzon/html/demo/1-2/01-Modern/images/daily-fresh-vacter.png' style={{width: "150px", height:"143px"}}></img>
         </div>
       </div>
 
@@ -112,4 +112,4 @@ const LogoutPage = () => {
   );
 };
 
-export default LogoutPage;
+export default LogoutPage
