@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../components/LogoutPage.css';
 import RegisterScreen from '../screens/RegisterScreen';
 import LoginModal from '../screens/LoginModal';
 import { useSelector } from 'react-redux';
 import LogoutToggle from './LogoutToggle';
+import Typed from 'typed.js'; // Import Typed.js
 
 const LogoutPage = () => {
   const [showRegistrationModal, setShowRegistrationModal] = useState(false);
@@ -26,6 +27,23 @@ const LogoutPage = () => {
     setShowRegistrationModal(true);
     document.body.style.overflow = "hidden";
   };
+  const loveRef = useRef(null);
+
+  useEffect(() => {
+    const typeData = new Typed(loveRef.current, {
+      strings: ['Love'],
+      loop: true,
+      typeSpeed: 100,
+      backSpeed: 80,
+      backDelay: 1000,
+      showCursor: false,
+    });
+    
+
+    return () => {
+      typeData.destroy();
+    };
+  }, []);
 
   return (
     <div className='logout-container'>
@@ -54,8 +72,13 @@ const LogoutPage = () => {
       </nav>
          <div className='hero-section'>
       <div>
-         <h1 className='heading'>Handmade, With an Extra Pinch of 
-         <span className='love-text'>Love</span> </h1>
+      <h1 className="heading">
+          Handmade,
+          <br />
+          With an Extra
+          <br />
+          Pinch of <span ref={loveRef} className="love-text"></span>
+        </h1>
         <p className='para'>"Indulge in the art of flavors, where every bite is a masterpiece waiting to be savored with love."</p>
         <div>
         <img className='cart-img' src='https://themes.templatescoder.com/pizzon/html/demo/1-2/01-Modern/images/cart-icon-white.png'></img>
