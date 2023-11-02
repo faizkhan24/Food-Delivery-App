@@ -8,7 +8,7 @@ export const placeOrder = (token, calculateSubtotal) => async (dispatch, getStat
     console.log('cart state',cartState)
   
     try {
-      const response = await axios.post('/api/orders/placeorder', {
+      const response = await axios.post("https://food-delivery-app-lyart.vercel.appapi/orders/placeorder", {
         token,
         calculateSubtotal,
         currentUser,
