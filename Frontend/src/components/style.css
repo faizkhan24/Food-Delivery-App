@@ -4,6 +4,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body{
+  overflow-x: hidden;
+}
 .nav-container {
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
   position: relative;
@@ -829,4 +833,114 @@
 }
 .sign-up-btn{
 margin-top: 2rem;
+}
+
+@media (max-width: 1326px){
+  .nav-container{
+    width: 83rem;
+
+  }
+  .slider{
+    width: 90%;
+    position: relative;
+    /* left: 3rem; */
+  }
+  .cuisine{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    /* left: 7rem; */
+  }
+  .card-section{
+    position: relative;
+    /* left: 7rem; */
+  }
+  .footer-section{
+    /* width: 112.5%; */
+  }
+
+  .social-media-container{
+    position: relative;
+    left: -5rem;
+  }
+}
+
+@media (max-width: 412px) {
+  .nav-items-container{
+    display: none;
+  }
+  .logo{
+    
+    object-fit: cover;
+    position: relative;
+    right: -1.3rem;
+  }
+  .slider{
+    display: none;
+    
+  }
+  .mobile-banner-img{
+    width: 380px;
+    height: 528px;
+    position: relative;
+    left: 4%;
+  }
+  .footer-section{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 0;
+    height: 100%;
+  }
+  .logo-on-footer{
+    transform: rotate(0deg);
+    position: relative;
+    right: -6rem;
+    top: 6rem;
+  }
+  .Information-container{
+    position: relative;
+    left: 9rem;
+    top: -6rem;
+  }
+  .topitem-container{
+    position: relative;
+    left: 6rem;
+    top: -19rem;
+  }
+
+  .social-media-container{
+    position: relative;
+    left: 2rem;
+    top: -45rem;
+  }
+  .other-container{
+    position: relative;
+    top: -32rem;
+    left: 6rem
+  }
+  .ham-burger{
+    position: relative;
+    left: 90%;
+    top: -91%;
+    z-index: 200;
+  }
+  .mobile-menu-open {
+    display: flex; /* or any other display value you prefer */
+    flex-direction: column; /* if you want them to stack vertically */
+  }
+  
+}
+
+@media (min-width: 1860px){
+.nav-items-mobile{
+  display: none;
+}
+  .ham-burger{
+    display: none;
+  }
+
+  .mobile-banner-img{
+    display: none;
+  }
 }
