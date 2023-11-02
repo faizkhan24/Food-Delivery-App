@@ -10,6 +10,7 @@ import Loading from "../screens/Loading";
 import { burger } from "../itemsData";
 import DropdownMenu from "./DropdownMenu";
 import { useDispatch, useSelector } from "react-redux";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 import {
   clearItem,
   decreaseQuantity,
@@ -21,13 +22,16 @@ import {
 import RegisterScreen from "../screens/RegisterScreen";
 import LoginModal from "../screens/LoginModal";
 import LogoutToggle from "./LogoutToggle";
-import MoreDropdown from "../components/MoreDropDown";
+// import MoreDropdown from "../components/MoreDropdown";
+import Checkout from "../components/Checkout";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Navbar({ cartItems, cartItemsName }) {
   const [color, setColor] = useState(false);
   const [cart, setCart] = useState(false);
   const [opendropDown, setDropDown] = useState(false);
   const [totalCartQuantity, setTotalCartQuantity] = useState(0);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const userState = useSelector((state) => state.loginUserReducer);
   const { currentUser } = userState;
 
@@ -94,6 +98,11 @@ export default function Navbar({ cartItems, cartItemsName }) {
       setTotalCartQuantity(newTotalCartQuantity);
     }
   }, [CartItems]);
+
+  const handleMobileMenuToggle = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+  
 
   return (
     <>
@@ -241,8 +250,11 @@ export default function Navbar({ cartItems, cartItemsName }) {
               Taxes and shipping calculated at checkout
             </p>
             <div className="cart-footer-btn">
-              <button className="viewCart-btn">VIEW CART</button>
-              <button className="checkout-btn">CHECKOUT</button>
+            <Link to={'/Cartpage'}>
+               <button className="viewCart-btn">VIEW CART</button>
+            </Link>
+             
+             <Checkout calculateSubtotal={calculateSubtotal}></Checkout>
             </div>
           </footer>
         </div>
@@ -256,6 +268,7 @@ export default function Navbar({ cartItems, cartItemsName }) {
             </div>
             <div className="nav-items-container">
               <Searchbar />
+              
               <ul className="nav-items" style={{ marginRight: 0, gap: '3rem' }}>
 
                 <NavLink
@@ -298,6 +311,8 @@ export default function Navbar({ cartItems, cartItemsName }) {
                 )}
               </ul>
 
+              
+
               {/* Login Modal */}
               {/* <LoginModal
                 showLoginModal={showLoginModal}
@@ -334,6 +349,11 @@ export default function Navbar({ cartItems, cartItemsName }) {
             /> */}
           </nav>
         </div>
+        <FontAwesomeIcon
+        className="ham-burger"
+        icon={faBars}
+        onClick={handleMobileMenuToggle}
+      />
       </div>
     </>
   );
