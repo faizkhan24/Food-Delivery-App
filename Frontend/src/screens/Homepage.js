@@ -14,6 +14,7 @@ import {
 import Module from "../components/Module";
 import { Link } from "react-router-dom";
 import { useCart } from "../components/CartContext";
+import Filter from "../components/Filter";
 
 export default function Homepage({ setTotalCartQuantity }) {
   const [data, setData] = useState(Home);
@@ -119,89 +120,23 @@ export default function Homepage({ setTotalCartQuantity }) {
               src="./images/bannner3.jpg"
               alt="Banner 2"
             />
+
+
           </figure>
         </div>
-        <div className="cuisine">
-          <button className="cuisine-btn" onClick={handleBurgerClick}>
-            <img
-              className="food-menu-img"
-              src="./images/Burger.webp"
-              alt="Burger"
-            />
-          </button>
-          <button className="cuisine-btn" onClick={handlePizzaClick}>
-            <img
-              className="food-menu-img"
-              src="./images/Pizza.webp"
-              alt="Pizza"
-            />
-          </button>
-          <button className="cuisine-btn" onClick={handleRollsClick}>
-            <img
-              className="food-menu-img"
-              src="./images/Rolls.webp"
-              alt="Rolls"
-            />
-          </button>
-          <button className="cuisine-btn" onClick={handleSouthIndClick}>
-            <img
-              className="food-menu-img"
-              src="./images/South_Indian_4.webp"
-              alt="South Indian"
-            />
-          </button>
-          <button className="cuisine-btn" onClick={handleSandwichClick}>
-            <img
-              className="food-menu-img"
-              src="./images/Sandwich.webp"
-              alt="Sandwich"
-            />
-          </button>
-          <button className="cuisine-btn" onClick={handlePastaClick}>
-            <img
-              className="food-menu-img"
-              src="./images/Pasta.webp"
-              alt="Sandwich"
-            />
-          </button>
+        <div className="slider2">
+        <figure>
 
-          <button className="cuisine-btn" onClick={handleChineseClick}>
-            <img
-              className="food-menu-img"
-              src="./images/Chinese.webp"
-              alt="Sandwich"
-            />
-          </button>
+        <img className="mobile-banner-img" src="./images/pizzaMobile.jpg"></img>
 
-          <button className="cuisine-btn" onClick={handleIceCreamClick}>
-            <img
-              className="food-menu-img"
-              src="./images/Ice_Creams.webp"
-              alt="Sandwich"
-            />
-          </button>
+        </figure>
 
-          <button className="cuisine-btn" onClick={handleCakeClick}>
-            <img
-              className="food-menu-img"
-              src="./images/Cakes.webp"
-              alt="Sandwich"
-            />
-          </button>
         </div>
+
+
+    <Filter></Filter>
         {/* <img className="discount-banner" src="./images/bannner6.jpg"></img> */}
-        {loading ? (
-          <div className="loading-container">
-            <div className="bar">
-              <div className="loading"></div>
-            </div>
-          </div>
-        ) : (
-          data && (
-            <Module data={data} handleAddToCart={handleAddToCart}
-          handleRemoveFromCart={handleRemoveFromCart} />
-          )
-        )}
+    
       </div>
     </>
   );

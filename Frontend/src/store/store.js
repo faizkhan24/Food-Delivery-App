@@ -3,6 +3,7 @@ import dishes from "./DishesSlice";
 import cartReducer from "./CartSlice";
 import { registerUserReducer } from "../reducers/UserReducer";
 import { loginUserReducer } from "../reducers/UserReducer";
+import { placeOrderReducer } from "../reducers/orderReducer";
 
 const currentUser = localStorage.getItem('currentUser') ? JSON.parse(localStorage.getItem('currentUser')) : null;
 
@@ -24,6 +25,7 @@ const store = configureStore({
     dishes: dishes,
     registerUserReducer: registerUserReducer,
     loginUserReducer: loginUserReducer,
+    placeOrderReducer: placeOrderReducer,
   },
   preloadedState: initialState,
 });
