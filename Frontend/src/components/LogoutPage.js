@@ -30,26 +30,18 @@ const LogoutPage = () => {
   const loveRef = useRef(null);
 
   useEffect(() => {
-    let typeData; // Declare the variable to hold the Typed instance
-
-    if (loveRef.current) {
-      typeData = new Typed(loveRef.current, {
-        strings: ['Love'],
-        loop: true,
-        typeSpeed: 100,
-        backSpeed: 80,
-        backDelay: 1000,
-        showCursor: true,
-        onComplete: (self) => {
-          self.cursor.style.display = 'inline'; // Hide the cursor when typing is complete
-        },
-      });
-    }
+    const typeData = new Typed(loveRef.current, {
+      strings: ['Love'],
+      loop: true,
+      typeSpeed: 100,
+      backSpeed: 80,
+      backDelay: 1000,
+      showCursor: false,
+    });
+    
 
     return () => {
-      if (typeData) {
-        typeData.destroy();
-      }
+      typeData.destroy();
     };
   }, []);
 
