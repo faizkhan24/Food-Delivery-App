@@ -24,6 +24,7 @@ import LoginModal from "../screens/LoginModal";
 import LogoutToggle from "./LogoutToggle";
 // import MoreDropdown from "../components/MoreDropdown";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Checkout from "./Checkout";
 
 export default function Navbar({ cartItems, cartItemsName }) {
   const [color, setColor] = useState(false);
@@ -253,7 +254,7 @@ export default function Navbar({ cartItems, cartItemsName }) {
                <button className="viewCart-btn">VIEW CART</button>
             </Link>
              
-             
+            <Checkout calculateSubtotal={calculateSubtotal}></Checkout>
             </div>
           </footer>
         </div>
