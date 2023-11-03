@@ -13,6 +13,7 @@ import store from "./store/store";
 import Module from "./components/Module";
 import RegisterScreen from "./screens/RegisterScreen";
 import LogoutPage from "./components/LogoutPage";
+import CartPage from "./screens/CartPage";
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -38,7 +39,8 @@ function App() {
             />
             <Route path="/Rolls" element={<RollsPage />} />
             <Route path="/Contact Us" element={<ContactPage />} />
-            <Route path="/Register" element={<RegisterScreen />} />
+            <Route path="/Cartpage" element={<CartPage/>} />
+      
           </Routes>
           <Footer />
           <GoToTop />
