@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import "../components/ContactPage.css";
-import "../screens/CartPage.css";
+import "../components/CartPage.css";
 
 import {
   clearItem,
@@ -12,7 +12,7 @@ import {
   removeItem,
   sumItemPrice,
 } from "../store/CartSlice";
-import Checkout from "../components/Checkout";
+
 
 const CartPage = (cartItems, cartItemsName) => {
   const [cart, setCart] = useState(false);

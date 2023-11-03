@@ -5,7 +5,6 @@ import "../App.css";
 import "../components/Cart.css";
 import { Link, NavLink } from "react-router-dom";
 import Searchbar from "./Searchbar";
-import CartPage from "../screens/CartPage";
 import Loading from "../screens/Loading";
 import { burger } from "../itemsData";
 import DropdownMenu from "./DropdownMenu";

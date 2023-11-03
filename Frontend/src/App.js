@@ -13,7 +13,7 @@ import store from "./store/store";
 import Module from "./components/Module";
 import RegisterScreen from "./screens/RegisterScreen";
 import LogoutPage from "./components/LogoutPage";
-import CartPage from "./screens/CartPage";
+import CartPage from "./components/CartPage";
 
 function App() {
   const [cart, setCart] = useState([]);
