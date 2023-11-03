@@ -865,7 +865,7 @@ margin-top: 2rem;
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 412px) {
   .nav-items-container{
     display: none;
   }
@@ -878,6 +878,18 @@ margin-top: 2rem;
   .slider{
     display: none;
     
+  }
+  .cuisine{
+    position: relative;
+    left: 0;
+  }
+  .card-section{
+    position: relative;
+    left: 0;
+  }
+  .arrow-icon{
+    width: 30px;
+    height: 30px;
   }
   .mobile-banner-img{
     width: 380px;
