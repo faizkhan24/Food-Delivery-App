@@ -11,7 +11,7 @@ const db = require("./db");
 app.use(express.json());
 const dishesRoute = require("./routes/dishesRoutes");
 const userRoute = require("./routes/userRoute");
-const orderRoute = require('./routes/ordersRoute')
+const orderRoute = require('./routes/orderRoute')
 
 app.use("/api/dishes", dishesRoute);
 app.use("/api/users", userRoute);
