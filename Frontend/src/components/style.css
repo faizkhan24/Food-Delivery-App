@@ -865,7 +865,7 @@ margin-top: 2rem;
   }
 }
 
-@media (max-width: 412px) {
+@media (max-width: 430px) {
   .nav-items-container{
     display: none;
   }
@@ -878,6 +878,9 @@ margin-top: 2rem;
   .slider{
     display: none;
     
+  }
+  .banners{
+    display: none;
   }
   .cuisine{
     position: relative;
