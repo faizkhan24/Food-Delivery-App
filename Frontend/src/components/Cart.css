@@ -70,6 +70,7 @@
     text-align: center;
     padding: 8px;
     border-right: 0.20px solid #bfbfbf;
+    cursor: pointer;
 }
 .quantity-decrease-btn:hover{
     color: #ffffff;
@@ -89,6 +90,7 @@
     text-align: center;
     padding: 8px;
     border-left: 0.20px solid #bfbfbf;
+    cursor: pointer;
 }
 .quantity-increase-btn:hover{
     color: #ffffff;
@@ -127,3 +129,23 @@
   .cart-item-wrapper::-webkit-scrollbar-thumb:hover {
     /* background: #b30000;  */
   }
+
+.paynow-btn{
+    height: 50px;
+    width: 150px;
+    /* margin: 30px; */
+    /* margin-right: 100px; */
+    overflow-y: hidden;
+    border-radius: 50px;
+    border: none;
+    background-color: #f22e3e;
+    color: #ffffff;
+    font-weight: 900;
+    letter-spacing: 1px;
+    margin-right: 40px;
+    margin-top: 2rem;
+    font-size: 0.90rem;
+    position: relative;
+    top: -1.5rem;
+    margin-left: 2rem;
+}

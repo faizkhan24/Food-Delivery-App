@@ -12,6 +12,7 @@ import {
   removeItem,
   sumItemPrice,
 } from "../store/CartSlice";
+import Checkout from "./Checkout";
 
 
 const CartPage = (cartItems, cartItemsName) => {
@@ -167,6 +168,8 @@ const CartPage = (cartItems, cartItemsName) => {
             {/* <div className="checkout-btn-container" >
               <button className="checkout-btn">PROCEED TO CHECKOUT</button>
             </div> */}
+
+            <Checkout  calculateSubtotal={calculateSubtotal}></Checkout>
           </div>
        
       </div>
