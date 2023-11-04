@@ -959,8 +959,18 @@ margin-top: 2rem;
   .mobile-banner-img{
     display: none;
   }
+
+  /* .nav-items-container{
+    position: relative;
+    left: 4rem;
+  } */
+  nav{
+    overflow-x: hidden;
+  }
 }
-@media (min-width: 898px){
+
+
+@media (min-width: 898px) and (max-width: 1000px){
 .nav-items-mobile{
   display: none;
 }
