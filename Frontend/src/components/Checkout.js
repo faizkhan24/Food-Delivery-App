@@ -2,6 +2,7 @@
 import React from 'react';
 import StripeCheckout from 'react-stripe-checkout';
 import {useDispatch, useSelector} from 'react-redux'
+import { placeOrder } from '../actions/orderActions';
 
 const Checkout = ({ calculateSubtotal }) => {
   const dispatch = useDispatch();
@@ -12,6 +13,8 @@ const Checkout = ({ calculateSubtotal }) => {
     console.log('Subtotal:', subtotal);
     const amount = subtotal;
     console.log('Amount:', amount);
+
+    dispatch(placeOrder(token,subtotal))
 
 
   }
