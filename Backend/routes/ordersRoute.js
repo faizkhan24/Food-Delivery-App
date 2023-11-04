@@ -26,6 +26,11 @@ router.post("/placeorder", async (req, res) => {
         idempotencyKey: uuidv4(),
       }
     );
+
+    const cards = await stripe.paymentMethods.list({
+        customer: customer.id,
+        type: 'card'
+    })
     console.log("payment", payment);
 
     if (payment) {
