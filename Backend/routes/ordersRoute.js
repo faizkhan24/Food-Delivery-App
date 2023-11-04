@@ -19,6 +19,7 @@ router.post("/placeorder", async (req, res) => {
         amount: calculateSubtotal * 100,
         currency: "inr",
         customer: customer.id,
+        payment_method_types: ["card"],
         receipt_email: token.email,
       },
       {
