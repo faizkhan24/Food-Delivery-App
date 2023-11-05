@@ -863,7 +863,7 @@ margin-top: 2rem;
   }
 }
 
-@media (max-width: 431px) {
+@media (max-width: 440px) {
   .nav-items-container{
     display: none;
   }
