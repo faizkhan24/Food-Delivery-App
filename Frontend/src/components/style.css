@@ -835,26 +835,106 @@ margin-top: 2rem;
 
 @media (max-width: 1326px){
   .nav-container{
-    width: 83rem;
+    width: 108rem;
 
   }
   .slider{
-    width: 90%;
+    width: 100%;
     position: relative;
-    /* left: 3rem; */
+    left: 13rem;
   }
   .cuisine{
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     position: relative;
-    /* left: 7rem; */
+    left: 13rem;
   }
   .card-section{
     position: relative;
-    /* left: 7rem; */
+    left: 15rem;
   }
   .footer-section{
-    /* width: 112.5%; */
+    width: 108rem;
+  }
+
+  .social-media-container{
+    position: relative;
+    left: -5rem;
+  }
+}
+@media (max-width: 1200px){
+  .nav-container{
+    width: 108rem;
+
+  }
+  .slider{
+    width: 100%;
+    position: relative;
+    left: 18rem;
+  }
+  .cuisine{
+    display: flex;
+    /* flex-wrap: wrap; */
+    position: relative;
+    left: 17rem;
+  }
+  .card-section{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    
+    
+    position: relative;
+    left: 15rem;
+  }
+  .footer-section{
+    width: 108rem;
+  }
+
+  .social-media-container{
+    position: relative;
+    left: -5rem;
+  }
+}
+@media (max-width: 1000px){
+  .nav-container{
+    width: 108rem;
+
+  }
+  .slider{
+    width: 89%;
+   
+  }
+  .nav-items-container{
+    display: none;
+  }
+  .ham-burger{
+    position: relative;
+    left: 90%;
+    top: -90%;
+    z-index: 105;
+  }
+  .logo-container img{
+    margin-left: 2rem;
+  }
+
+
+
+  .cuisine{
+    display: flex;
+    /* flex-wrap: wrap; */
+    position: relative;
+    left: 17rem;
+  }
+  .card-section{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    
+    
+    position: relative;
+    left: 15rem;
+  }
+  .footer-section{
+    width: 108rem;
   }
 
   .social-media-container{
@@ -865,12 +945,30 @@ margin-top: 2rem;
 
 
 
-@media (min-width: 1860px){
+@media (min-width: 1881px){
 .nav-items-mobile{
   display: none;
 }
   .ham-burger{
+    /* display: none; */
+  }
+
+  .mobile-banner-img{
     display: none;
+  }
+
+  /* .nav-items-container{
+    position: relative;
+    left: 4rem;
+  } */
+  
+}
+@media (max-width: 1860px){
+.nav-items-mobile{
+  display: none;
+}
+  .ham-burger{
+    /* display: none; */
   }
 
   .mobile-banner-img{
@@ -890,7 +988,7 @@ margin-top: 2rem;
   display: none;
 }
   .ham-burger{
-    display: none;
+    /* display: none; */
   }
 
   .mobile-banner-img{
@@ -931,7 +1029,7 @@ margin-top: 2rem;
 }
   }
 
-  
+
 @media (max-width: 440px) {
   .nav-items-container{
     display: none;
