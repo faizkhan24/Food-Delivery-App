@@ -833,284 +833,69 @@
 margin-top: 2rem;
 }
 
-@media (max-width: 1326px){
-  .nav-container{
-    width: 108rem;
+/* Desktop */
+/* @media screen and (min-width: 1024px) {
 
-  }
-  .slider{
-    width: 100%;
-    position: relative;
-    left: 13rem;
-  }
-  .cuisine{
-    display: flex;
-    /* flex-wrap: wrap; */
-    position: relative;
-    left: 13rem;
-  }
-  .card-section{
-    position: relative;
-    left: 15rem;
-  }
-  .footer-section{
-    width: 108rem;
-  }
-
-  .social-media-container{
-    position: relative;
-    left: -5rem;
-  }
-}
-@media (max-width: 1200px){
-  .nav-container{
-    width: 108rem;
-
-  }
-  .slider{
-    width: 100%;
-    position: relative;
-    left: 18rem;
-  }
-  .cuisine{
-    display: flex;
-    /* flex-wrap: wrap; */
-    position: relative;
-    left: 17rem;
-  }
-  .card-section{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    
-    
-    position: relative;
-    left: 15rem;
-  }
-  .footer-section{
-    width: 108rem;
-  }
-
-  .social-media-container{
-    position: relative;
-    left: -5rem;
-  }
-}
-@media (max-width: 1000px){
-  .nav-container{
-    width: 108rem;
-
-  }
-  .slider{
-    width: 89%;
-   
-  }
-  .nav-items-container{
+  .ham-burger{
     display: none;
   }
-  .ham-burger{
-    position: relative;
-    left: 90%;
-    top: -90%;
-    z-index: 105;
-  }
-  .logo-container img{
-    margin-left: 2rem;
-  }
-
-
-
-  .cuisine{
-    display: flex;
-    /* flex-wrap: wrap; */
-    position: relative;
-    left: 17rem;
-  }
-  .card-section{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    
-    
-    position: relative;
-    left: 15rem;
-  }
-  .footer-section{
-    width: 108rem;
-  }
-
-  .social-media-container{
-    position: relative;
-    left: -5rem;
-  }
-}
-
-
-
-@media (min-width: 1881px){
-.nav-items-mobile{
-  display: none;
-}
-  .ham-burger{
-    /* display: none; */
-  }
-
   .mobile-banner-img{
     display: none;
   }
-
-  /* .nav-items-container{
+  .slider{
+    
     position: relative;
-    left: 4rem;
-  } */
-  
-}
-@media (max-width: 1860px){
-.nav-items-mobile{
-  display: none;
-}
-  .ham-burger{
-    /* display: none; */
+    left: 8%;
+    max-width: 70rem;
   }
-
-  .mobile-banner-img{
-    display: none;
-  }
-
-  /* .nav-items-container{
+  .cuisine{
     position: relative;
-    left: 4rem;
-  } */
-  
-}
-
-
-@media (min-width: 898px) and (max-width: 1000px){
-.nav-items-mobile{
-  display: none;
-}
-  .ham-burger{
-    /* display: none; */
-  }
-
-  .mobile-banner-img{
-    display: none;
-  }
-  .card-section{
+    left: 15%;
     display: flex;
     flex-wrap: wrap;
   }
-  /* .App{
-    overflow-x: hidden;
-  } */
-  .slider{
-    position: relative;
-    left: 0rem;
-  }
-  .cuisine{
-    position: relative;
-    left: 0rem;
-  }
+
   .card-section{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     position: relative;
-    left: 0rem;
-  }
-  .logo-container img{
-    position: relative;
-    left: -4rem;
-  }
-  .nav-items-container{
-    position: relative;
-    left: -10rem;
-  }
-  .cart-footer{
-    position: fixed;
-    top: 49rem;
-    right: -0.50rem;
-    width: 42.6%;
-}
+    left: 34%;
   }
 
-
-@media (max-width: 440px) {
-  .nav-items-container{
-    display: none;
-  }
-  .logo{
-    
-    object-fit: cover;
-    position: relative;
-    right: -1.3rem;
-  }
-  .slider{
-    display: none;
-    
-  }
-  .banners{
-    display: none;
-  }
-  .cuisine{
-    position: relative;
-    left: 0;
-  }
-  .card-section{
-    position: relative;
-    left: 0;
-  }
-  .arrow-icon{
-    width: 30px;
-    height: 30px;
-  }
-  .mobile-banner-img{
-    width: 380px;
-    height: 528px;
-    position: relative;
-    left: 4%;
-  }
   .footer-section{
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    left: 0;
-    height: 100%;
+    width: 100%;
   }
-  .logo-on-footer{
-    transform: rotate(0deg);
-    position: relative;
-    right: -6rem;
-    top: 6rem;
-  }
-  .Information-container{
-    position: relative;
-    left: 9rem;
-    top: -6rem;
-  }
-  .topitem-container{
-    position: relative;
-    left: 6rem;
-    top: -19rem;
+ 
+} */
+/* 
+@media screen and (min-width: 1860px) {
+  .nav-container{
+    width: 157rem; 
   }
 
-  .social-media-container{
+  .slider{
+    max-width: 100%;
+    position: relative;
+    left: 0;
+  }
+  .nav-items-container{
+    position: relative;
+    right: 40rem;
+  }
+  .cuisine{
+    position: relative;
+    left: 0;
+  }
+  .card-section{
     position: relative;
     left: 2rem;
-    top: -45rem;
   }
-  .other-container{
-    position: relative;
-    top: -32rem;
-    left: 6rem
+  .footer-section{
+    width: 157rem;
   }
-  .ham-burger{
-    position: relative;
-    left: 90%;
-    top: -91%;
-    z-index: 200;
+  .Navbar-comp{
+    position: sticky;
+    top: 0;
   }
-  .mobile-menu-open {
-    display: flex; /* or any other display value you prefer */
-    flex-direction: column; /* if you want them to stack vertically */
-  }
-  .App{
-    overflow-x: hidden;
-  }
-  
-}
+
+} */

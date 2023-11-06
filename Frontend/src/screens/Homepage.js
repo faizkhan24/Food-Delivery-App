@@ -127,7 +127,7 @@ export default function Homepage({ setTotalCartQuantity }) {
         <div className="slider2">
         <figure>
 
-        <img className="mobile-banner-img" src="./images/pizzaMobile.jpg"></img>
+        {/* <img className="mobile-banner-img" src="./images/pizzaMobile.jpg"></img> */}
 
         </figure>
 

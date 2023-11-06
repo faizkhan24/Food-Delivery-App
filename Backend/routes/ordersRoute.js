@@ -14,12 +14,10 @@ router.post("/placeorder", async (req, res) => {
       source: token.id,
     });
 
-    const payment = await stripe.paymentIntents.create(
+    const payment = await stripe.charges.create(
       {
         amount: calculateSubtotal * 100,
         currency: "inr",
-        customer: customer.id,
-        payment_method_types: ["card"],
         receipt_email: token.email,
       },
       {

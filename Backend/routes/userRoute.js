@@ -1,12 +1,16 @@
 const express = require("express");
 const router = express.Router();
 const User = require('../Models/userModel');
+const bcrypt = require('bcrypt');
 
 // Registration Route
 router.post('/register', async (req, res) => {
   const { name, email, password } = req.body;
 
-  const newUser = new User({ name, email, password });
+  // Hash the password using bcrypt
+  const hashedPassword = await bcrypt.hash(password, 10); // You can adjust the number of salt rounds as needed
+
+  const newUser = new User({ name, email, password: hashedPassword });
 
   try {
     await newUser.save();
@@ -15,7 +19,6 @@ router.post('/register', async (req, res) => {
     res.status(400).json({ message: error.message });
   }
 });
-
 // Login Route
 
 router.post('/login', async (req, res) => {
