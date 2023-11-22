@@ -17,7 +17,7 @@ export default function Items({ pizza, setTotalCartQuantity }) {
         quantityControlsRef.current &&
         !quantityControlsRef.current.contains(event.target)
       ) {
-        // Click occurred outside the quantity controls
+       
         setShowQuantityControls(false);
       }
     };
@@ -30,13 +30,12 @@ export default function Items({ pizza, setTotalCartQuantity }) {
   }, []);
 
   const addToCart = () => {
-    // Implement the logic to add the selected quantity and variant to the cart here
-    // For now, let's just display the selected values in the console
+    
 
     setTotalCartQuantity((prev) => prev + 1);
 
-    // console.log("Added to cart:", quantity, varient);
-    setShowQuantityControls(true); // Show quantity controls after adding to cart
+   
+    setShowQuantityControls(true); 
   };
 
   const incrementQuantity = () => {
@@ -49,13 +48,13 @@ export default function Items({ pizza, setTotalCartQuantity }) {
   const handleAddItem = (item) => {
     dispatch(addItem(item));
     dispatch(sumItemPrice(item.price));
-    // console.log("handleitme", item);
+ 
   };
   const decrementQuantity = () => {
     if (quantity > 1) {
       setQuantity(quantity - 1);
     } else {
-      // If quantity is 1, hide the quantity controls
+     
       setShowQuantityControls(false);
     }
   };
@@ -81,10 +80,7 @@ export default function Items({ pizza, setTotalCartQuantity }) {
         <div className="add-to-cart">
           {showQuantityControls ? (
             <div ref={quantityControlsRef} className="quantity-controls">
-              {/* <button className="decrement" onClick={decrementQuantity}>
-                -
-              </button> */}
-              {/* <span className="quantity">{quantity}</span> */}
+             
               <button
                 className="increment"
                 onClick={() => handleAddItem(pizza)}

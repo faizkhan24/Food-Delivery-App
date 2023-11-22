@@ -23,17 +23,17 @@ const LogoutToggle = () => {
   };
 
   useEffect(() => {
-    // Add a click event listener to the document
+
     document.addEventListener("click", handleDocumentClick);
 
     return () => {
-      // Remove the click event listener when the component unmounts
+ 
       document.removeEventListener("click", handleDocumentClick);
     };
   }, []);
 
   const handleDocumentClick = (e) => {
-    // Check if the click is outside the dropdown
+ 
     if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
       closeDropdown();
     }

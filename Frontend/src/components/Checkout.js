@@ -3,7 +3,6 @@ import React from 'react';
 import StripeCheckout from 'react-stripe-checkout';
 import {useDispatch, useSelector} from 'react-redux'
 import { placeOrder } from '../actions/orderActions';
-
 const Checkout = ({ calculateSubtotal }) => {
   const dispatch = useDispatch();
 
@@ -11,12 +10,10 @@ const Checkout = ({ calculateSubtotal }) => {
     console.log('Token:', token);
     const subtotal = calculateSubtotal();
     console.log('Subtotal:', subtotal);
-    const amount = subtotal;
+    const amount = subtotal * 100;
     console.log('Amount:', amount);
 
-    dispatch(placeOrder(token,subtotal))
-
-
+    dispatch(placeOrder(token, subtotal)); // Pass the subtotal as the amount
   }
 
   // ...rest of the code
@@ -24,7 +21,7 @@ const Checkout = ({ calculateSubtotal }) => {
 
 
   // Calculate the amount using the calculateSubtotal function
-  const amount = calculateSubtotal()*100;
+  const amount = calculateSubtotal();
 
   return (
     <div>

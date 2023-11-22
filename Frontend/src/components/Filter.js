@@ -20,12 +20,12 @@ const Filter = () => {
     const [category, setCategory] = useState('all')
     
   const handleAddToCart = (item) => {
-    // Dispatch an action to add the item to the cart
+  
     dispatch({ type: "ADD_TO_CART", payload: item });
   };
 
   const handleRemoveFromCart = (item) => {
-    // Dispatch an action to remove the item from the cart
+
     dispatch({ type: "REMOVE_FROM_CART", payload: item });
   };
     const dispatch = useDispatch()

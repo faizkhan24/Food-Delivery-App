@@ -14,9 +14,12 @@ import Module from "./components/Module";
 import RegisterScreen from "./screens/RegisterScreen";
 import LogoutPage from "./components/LogoutPage";
 import CartPage from "./components/CartPage";
+import Filter from "./components/Filter";
+import filterData from "./FilterData";
 
 function App() {
   const [cart, setCart] = useState([]);
+  const [category, setCategory] = useState(filterData[0].title);
 
   // Function to update the cart state
   const updateCart = (newCart) => {
@@ -42,6 +45,8 @@ function App() {
             <Route path="/Cartpage" element={<CartPage/>} />
       
           </Routes>
+          
+      
           <Footer />
           <GoToTop />
         </BrowserRouter>

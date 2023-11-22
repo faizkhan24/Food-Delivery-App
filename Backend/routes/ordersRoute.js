@@ -13,22 +13,28 @@ router.post("/placeorder", async (req, res) => {
       email: token.email,
       source: token.id,
     });
+    console.log("calculateSubtotal:", calculateSubtotal);
 
-    const payment = await stripe.charges.create(
+    const amountInPaise = calculateSubtotal * 100;
+
+    const payment = await stripe.paymentIntents.create(
       {
-        amount: calculateSubtotal * 100,
+        amount: amountInPaise,
         currency: "inr",
+        customer: customer.id,
         receipt_email: token.email,
+        automatic_payment_methods: {
+          enabled: true,
+        },
+        
+        
       },
+
       {
         idempotencyKey: uuidv4(),
       }
     );
 
-    const cards = await stripe.paymentMethods.list({
-        customer: customer.id,
-        type: 'card'
-    })
     console.log("payment", payment);
 
     if (payment) {
@@ -37,8 +43,13 @@ router.post("/placeorder", async (req, res) => {
       res.send("Payment failed");
     }
   } catch (error) {
-    return res.status(400).json({ message: "Bad Request", error: error.message });
-      
+    console.error("Request failed with status code 400:", error);
+    if (error.response) {
+      console.error("Server Response:", error.response.data);
+    }
+    return res
+      .status(400)
+      .json({ message: "Bad Request", error: error.message });
   }
 });
 

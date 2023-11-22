@@ -10,15 +10,15 @@ const Module = ({ data, setTotalCartQuantity }) => {
 
   const datas = useSelector((state) => {
     console.log(state.dishes);
-    return state.dishes; // Access the dishes slice
+    return state.dishes; 
   });
 
   useEffect(() => {
-    // Dispatch the action when the component mounts
+  
     dispatch(getAllData());
-  }, []); // Empty dependency array ensures this runs only once
+  }, []); 
 
-  // Make sure datas is defined and has a 'dishes' property before mapping over it
+  
   if (datas && datas.dishes) {
     return (
       <div>

@@ -195,7 +195,16 @@ code {
   font-size: 20px;
   margin-left: 10px;
 }
+.cuisine-img{
+  height: 200px;
+  width: 200px;
 
+}
+.cuisine-btn-container{
+ position: relative;
+ left: 4rem;
+ top: 2rem;
+}
 .form-control {
   display: block;
   width: 100%;
