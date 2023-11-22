@@ -10,7 +10,7 @@ const Checkout = ({ calculateSubtotal }) => {
     console.log('Token:', token);
     const subtotal = calculateSubtotal();
     console.log('Subtotal:', subtotal);
-    const amount = subtotal * 100;
+    const amount = subtotal;
     console.log('Amount:', amount);
 
     dispatch(placeOrder(token, subtotal)); // Pass the subtotal as the amount
@@ -21,7 +21,7 @@ const Checkout = ({ calculateSubtotal }) => {
 
 
   // Calculate the amount using the calculateSubtotal function
-  const amount = calculateSubtotal();
+  const amount = calculateSubtotal()*100;
 
   return (
     <div>
