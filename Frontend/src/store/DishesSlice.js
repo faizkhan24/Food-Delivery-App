@@ -17,7 +17,7 @@ export const filterDishes = createAsyncThunk("dishes/filter", async (searchKey) 
       console.log(filterDishes)
       const dishes = await response.json();
   
-      // Ensure that 'dishes' is an array before filtering
+    
       if (Array.isArray(dishes)) {
         const filteredDishes = dishes.filter((dish) =>
           dish.name.toLowerCase().includes(searchKey.toLowerCase())
@@ -28,7 +28,7 @@ export const filterDishes = createAsyncThunk("dishes/filter", async (searchKey) 
         throw new Error("Data is not in the expected format");
       }
     } catch (error) {
-      // Handle errors appropriately
+   
       throw error;
     }
   });

@@ -7,7 +7,6 @@ import { Link, NavLink } from "react-router-dom";
 import Searchbar from "./Searchbar";
 import Loading from "../screens/Loading";
 import { burger } from "../itemsData";
-import DropdownMenu from "./DropdownMenu";
 import { useDispatch, useSelector } from "react-redux";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import {
@@ -19,7 +18,7 @@ import {
   sumItemPrice,
 } from "../store/CartSlice";
 import RegisterScreen from "../screens/RegisterScreen";
-import LoginModal from "../screens/LoginModal";
+
 import LogoutToggle from "./LogoutToggle";
 // import MoreDropdown from "../components/MoreDropdown";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

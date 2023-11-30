@@ -27,7 +27,7 @@ function App() {
   const [cart, setCart] = useState([]);
   const [category, setCategory] = useState(filterData[0].title);
 
-  // Function to update the cart state
+
   const updateCart = (newCart) => {
     setCart(newCart);
   };

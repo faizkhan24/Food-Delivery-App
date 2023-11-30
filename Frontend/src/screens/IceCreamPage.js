@@ -9,10 +9,10 @@ function IceCreamPage() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        // Simulate a delay (replace this with your actual API call)
+      
         await new Promise((resolve) => setTimeout(resolve, 2000));
 
-        // Set the ice cream items once fetched
+      
         setIceCream(iceCream);
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -21,7 +21,7 @@ function IceCreamPage() {
       }
     };
 
-    // Call the fetch function
+    
     fetchData();
   }, []);
 

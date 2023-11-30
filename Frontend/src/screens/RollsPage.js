@@ -9,10 +9,10 @@ function RollsPage() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        // Simulate a delay (replace this with your actual API call)
+
         await new Promise((resolve) => setTimeout(resolve, 2000));
 
-        // Set the rolls items once fetched
+      
         setRolls(rolls);
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -21,7 +21,7 @@ function RollsPage() {
       }
     };
 
-    // Call the fetch function
+
     fetchData();
   }, []);
 

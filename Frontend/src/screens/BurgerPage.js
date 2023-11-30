@@ -10,10 +10,10 @@ function BurgerPage() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        // Simulate a delay (replace this with your actual API call)
+        
         await new Promise((resolve) => setTimeout(resolve, 2000));
 
-        // Set the burger items once fetched
+      
         setBurgers(burger);
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -22,7 +22,7 @@ function BurgerPage() {
       }
     };
 
-    // Call the fetch function
+
     fetchData();
   }, []);
 

@@ -3,7 +3,7 @@ import "../components/search.css";
 
 function Searchbar() {
   return (
-    <form className="search-container" action="//llamaswill.tumblr.com/search">
+    <form className="search-container" action="">
       {/* <input id="search-box" type="text" className="search-box" name="q" placeholder='What are you looking for?'
         
       />

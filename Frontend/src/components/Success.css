@@ -1,4 +1,4 @@
-/* Define the alert styles */
+
 .alert {
     padding: 1rem;
     border: 1px solid transparent;
@@ -6,16 +6,16 @@
    margin-bottom: 4rem;
   }
   
-  /* Define the success alert style */
+
   .alert-success {
-    color: #155724; /* Text color for success alert */
-    background-color: #d4edda; /* Background color for success alert */
-    border-color: #c3e6cb; /* Border color for success alert */
+    color: #155724; 
+    background-color: #d4edda; 
+    border-color: #c3e6cb; 
   }
   
-  /* Optionally, style the link inside the alert */
+
   .alert a {
-    font-weight: 600; /* Adjust the link's font weight */
-    color: #155724; /* Adjust the link's color */
+    font-weight: 600;
+    color: #155724; 
   }
   

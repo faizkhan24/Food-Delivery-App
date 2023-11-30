@@ -30,7 +30,7 @@ const store = configureStore({
   preloadedState: initialState,
 });
 
-// Subscribe to the cart state changes and save it to local storage
+
 store.subscribe(() => {
   const cartState = store.getState().cart;
   localStorage.setItem('cart', JSON.stringify(cartState));

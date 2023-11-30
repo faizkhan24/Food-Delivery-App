@@ -53,9 +53,8 @@ export default function Items({ pizza, setTotalCartQuantity }) {
     }
   };
 
-  // Check if pizza is defined and has the 'image' property
   if (!pizza || !pizza.image) {
-    return null; // or render a placeholder/error message
+    return null; 
   }
 
   return (

@@ -9,10 +9,10 @@ function SandwichPage() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        // Simulate a delay (replace this with your actual API call)
+      
         await new Promise((resolve) => setTimeout(resolve, 2000));
 
-        // Set the sandwich items once fetched
+
         setSandwich(sandwich);
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -21,7 +21,7 @@ function SandwichPage() {
       }
     };
 
-    // Call the fetch function
+ 
     fetchData();
   }, []);
 

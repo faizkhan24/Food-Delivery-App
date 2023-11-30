@@ -9,10 +9,10 @@ function ChinesePage() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        // Simulate a delay (replace this with your actual API call)
+
         await new Promise((resolve) => setTimeout(resolve, 2000));
 
-        // Set the Chinese items once fetched
+
         setChinese(chinese);
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -21,7 +21,7 @@ function ChinesePage() {
       }
     };
 
-    // Call the fetch function
+
     fetchData();
   }, []);
 

@@ -23,7 +23,7 @@ const CartSlice = createSlice({
         state.items.push([{ ...action.payload, quantity: 1 }]);
       }
 
-      // After modifying the state, save it to local storage
+      
       saveCartToLocalStorage(state);
     },
     removeItem: (state, action) => {
@@ -31,26 +31,26 @@ const CartSlice = createSlice({
         (item) => item[0].name !== action.payload
       );
 
-      // After modifying the state, save it to local storage
+    
       saveCartToLocalStorage(state);
     },
     clearItem: (state) => {
       state.items.length = 0;
       state.sum = 0;
 
-      // After modifying the state, save it to local storage
+    
       saveCartToLocalStorage(state);
     },
     sumItemPrice: (state, action) => {
       state.sum += action.payload;
 
-      // After modifying the state, save it to local storage
+      
       saveCartToLocalStorage(state);
     },
     deductItemPrice: (state, action) => {
       state.sum -= action.payload;
 
-      // After modifying the state, save it to local storage
+     
       saveCartToLocalStorage(state);
     },
     increaseQuantity: (state, action) => {
@@ -59,7 +59,7 @@ const CartSlice = createSlice({
         item[0].quantity += 1;
       }
 
-      // After modifying the state, save it to local storage
+      
       saveCartToLocalStorage(state);
     },
     decreaseQuantity: (state, action) => {
@@ -68,7 +68,7 @@ const CartSlice = createSlice({
         item[0].quantity -= 1;
       }
 
-      // After modifying the state, save it to local storage
+     
       saveCartToLocalStorage(state);
     },
   },
