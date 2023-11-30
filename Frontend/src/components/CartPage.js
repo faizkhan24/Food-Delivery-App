@@ -163,7 +163,7 @@ const CartPage = (cartItems, cartItemsName) => {
             </div>
             <div className="order-container">
               <p>Order Total</p>
-              <p>₹100</p>
+              <p>₹{calculateSubtotal()+100}</p>
             </div>
             {/* <div className="checkout-btn-container" >
               <button className="checkout-btn">PROCEED TO CHECKOUT</button>
