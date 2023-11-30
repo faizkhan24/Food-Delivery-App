@@ -17,7 +17,6 @@ export default function Items({ pizza, setTotalCartQuantity }) {
         quantityControlsRef.current &&
         !quantityControlsRef.current.contains(event.target)
       ) {
-       
         setShowQuantityControls(false);
       }
     };
@@ -30,12 +29,8 @@ export default function Items({ pizza, setTotalCartQuantity }) {
   }, []);
 
   const addToCart = () => {
-    
-
     setTotalCartQuantity((prev) => prev + 1);
-
-   
-    setShowQuantityControls(true); 
+    setShowQuantityControls(true);
   };
 
   const incrementQuantity = () => {
@@ -48,22 +43,25 @@ export default function Items({ pizza, setTotalCartQuantity }) {
   const handleAddItem = (item) => {
     dispatch(addItem(item));
     dispatch(sumItemPrice(item.price));
- 
   };
+
   const decrementQuantity = () => {
     if (quantity > 1) {
       setQuantity(quantity - 1);
     } else {
-     
       setShowQuantityControls(false);
     }
   };
 
+  // Check if pizza is defined and has the 'image' property
+  if (!pizza || !pizza.image) {
+    return null; // or render a placeholder/error message
+  }
+
   return (
     <div className="pizza-container">
       <span>
-        {" "}
-        <HeartAnimation />{" "}
+        <HeartAnimation />
       </span>
       <img src={pizza.image} className="img-fluid" alt={pizza.name} />
 
@@ -80,7 +78,6 @@ export default function Items({ pizza, setTotalCartQuantity }) {
         <div className="add-to-cart">
           {showQuantityControls ? (
             <div ref={quantityControlsRef} className="quantity-controls">
-             
               <button
                 className="increment"
                 onClick={() => handleAddItem(pizza)}
@@ -89,10 +86,7 @@ export default function Items({ pizza, setTotalCartQuantity }) {
               </button>
             </div>
           ) : (
-            <button
-              className="btn"
-              onClick={() => handleAddItem(pizza)}
-            >
+            <button className="btn" onClick={() => handleAddItem(pizza)}>
               ADD +
             </button>
           )}

@@ -1,16 +1,48 @@
-// PizzaPage.js
-
-import React from "react";
-
-import {chinese} from "../itemsData";
+import React, { useState, useEffect } from "react";
 import Items from "../components/Items";
-
+import { chinese } from "../itemsData";
 
 function ChinesePage() {
+  const [loading, setLoading] = useState(true);
+  const [chineseData, setChinese] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        // Simulate a delay (replace this with your actual API call)
+        await new Promise((resolve) => setTimeout(resolve, 2000));
+
+        // Set the Chinese items once fetched
+        setChinese(chinese);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    // Call the fetch function
+    fetchData();
+  }, []);
+
+  console.log('arrived at chinesepage')
+  console.log('chinesepage', chineseData);
 
   return (
     <>
- <div className="slider">
+      {loading ? (
+        <div className="loading-container">
+          <div className="bar">
+            <div className="loading"></div>
+            <div
+              className="loading-shimmer"
+              style={{ height: "100vh", marginBottom: "20px" }}
+            />
+          </div>
+        </div>
+      ) : (
+        <>
+          <div className="slider">
             <figure>
               <img
                 className="banners"
@@ -35,15 +67,15 @@ function ChinesePage() {
             </figure>
           </div>
 
-{chinese.map((chinese) => {
-            return (
-              <div className="custom-column" key={chinese.id}>
-                <div className="items-container">
-                  <Items pizza={chinese} />
-                </div>
+          {chineseData.map((chineseItem) => (
+            <div className="custom-column" key={chineseItem.id}>
+              <div className="items-container">
+                <Items pizza={chineseItem} />
               </div>
-            );
-          })}
+            </div>
+          ))}
+        </>
+      )}
     </>
   );
 }
