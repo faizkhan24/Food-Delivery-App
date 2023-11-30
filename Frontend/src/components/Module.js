@@ -48,7 +48,7 @@ const Module = ({ setTotalCartQuantity }) => {
         id="search-box"
         type="text"
         className="search-box"
-        name="q"
+        name="search"
         placeholder="What are you looking for?"
       />
       <label htmlFor="search-box">

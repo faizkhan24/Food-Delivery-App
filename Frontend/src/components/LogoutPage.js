@@ -7,6 +7,7 @@ import { useSelector } from "react-redux";
 import LogoutToggle from "./LogoutToggle";
 import Typed from "typed.js"; // Import Typed.js
 
+
 const LogoutPage = () => {
   const [showRegistrationModal, setShowRegistrationModal] = useState(false);
   const [showLoginModal, setShowLoginModal] = useState(false);
@@ -125,7 +126,7 @@ const LogoutPage = () => {
           <img src="https://themes.templatescoder.com/pizzon/html/demo/1-2/01-Modern/images/onion.png"></img>
         </div>
       </div>
-
+  
       <div className="section-2">
         <img
           src="https://themes.templatescoder.com/pizzon/html/demo/1-2/01-Modern/images/daily-fresh.png"
@@ -144,7 +145,7 @@ const LogoutPage = () => {
         </div>
       </div>
 
-      <div className="section-3">
+   <div className="section-3">
         <div className="main-head">
           <p className="our-strength-heading">Our Strength</p>
           <div className="div-line"></div>
@@ -192,6 +193,9 @@ const LogoutPage = () => {
           src="https://themes.templatescoder.com/pizzon/html/demo/1-2/01-Modern/images/strength-vacter.png"
         ></img>
       </div>
+
+     
+     
 
       <div className="section-4" >
         <img

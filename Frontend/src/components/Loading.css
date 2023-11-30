@@ -1,9 +1,17 @@
-.spinner {
-    width: 56px;
-    height: 56px;
-    border-radius: 50%;
-    border: 9px solid;
-    border-color: #dbdcef;
-    border-right-color: #474bff;
-    animation: spinner-d3wgkg 1s infinite linear;
- }
+/* loading.css */
+
+@keyframes loadingShimmer {
+    0% {
+      background-position: -200%;
+    }
+    100% {
+      background-position: 200%;
+    }
+  }
+  
+  .loading-shimmer {
+    animation: loadingShimmer 1.5s infinite linear;
+    background: linear-gradient(90deg, #eee 25%, #ddd 50%, #eee 75%);
+    background-size: 200% 100%;
+  }
+  

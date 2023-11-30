@@ -16,7 +16,13 @@ import LogoutPage from "./components/LogoutPage";
 import CartPage from "./components/CartPage";
 import Filter from "./components/Filter";
 import filterData from "./FilterData";
-
+import PizzaPage from "./screens/PizzaPage";
+import { SouthInd } from "./itemsData";
+import SandwichPage from "./screens/SandwichPage";
+import PastaPage from "./screens/PastaPage";
+import ChinesePage from './screens/ChinesePage'
+import IceCreamPage from './screens/IceCreamPage'
+import CakesPage from './screens/CakesPage'
 function App() {
   const [cart, setCart] = useState([]);
   const [category, setCategory] = useState(filterData[0].title);
@@ -43,6 +49,17 @@ function App() {
             <Route path="/Rolls" element={<RollsPage />} />
             <Route path="/Contact Us" element={<ContactPage />} />
             <Route path="/Cartpage" element={<CartPage/>} />
+            <Route path="/BurgerPage" element={<BurgerPage/>} />
+            <Route path="/PizzaPage" element={<PizzaPage/>} />
+            <Route path="/southInd" element={<SouthInd/>} />
+            <Route path="/sandwich" element={<SandwichPage/>} />
+            <Route path="/pasta" element={<PastaPage/>} />
+            <Route path="/chinese" element={<ChinesePage/>} />
+            <Route path="/icecream" element={<IceCreamPage/>} />
+            <Route path="/cake" element={<CakesPage/>} />
+            
+            
+          
       
           </Routes>
           

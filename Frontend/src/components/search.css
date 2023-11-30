@@ -7,7 +7,7 @@
   border: none;
   cursor: pointer;
   position: relative;
-  top: -66em;
+  top: -70em;
   right: -76em;
   z-index: 100;
   /* background: rgb(235, 235, 235); */
@@ -60,9 +60,25 @@
   left: -30px;
   top: 5px; */
   position: relative;
-  top: -54.7em;
+  top: -57.7em;
   z-index: 1000;
   left: 61.5em;
   color: white;
   cursor: pointer;
 }
+
+@media (max-width:1630px){
+  .search-box{
+    position: relative;
+    right: -50rem;
+    top: -70em;
+  }
+  .search-icon{
+    position: relative;
+    left: 48em;
+    top: -58em;
+  }
+
+ 
+} 
+  

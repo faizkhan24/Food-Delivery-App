@@ -1,8 +1,8 @@
-
 import React from "react";
-import Pizza from "../components/Items";
+
 import {SouthInd} from "../itemsData";
 import Items from "../components/Items";
+
 
 
 function SouthIndian() {
@@ -10,7 +10,7 @@ function SouthIndian() {
   return (
     <>
 
-{SouthInd.map((SouthIndian) => {
+{SouthInd.map((SouthInd) => {
             return (
               <div className="custom-column" key={SouthInd.id}>
                 <div className="items-container">

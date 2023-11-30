@@ -590,7 +590,7 @@
   z-index: inherit;
   width: 1680px;
   margin: 0 auto;
-  margin-top: 30px;
+  margin-top: 60px;
 }
 
 @keyframes slider {
@@ -627,7 +627,7 @@
 }
 .slider figure .banners {
   width: 33.33%;
-  height: 450px;
+  height: 480px;
   float: left;
   box-shadow: 5px 5px 8px rgb(171, 170, 170);
 }
@@ -832,70 +832,50 @@
 .sign-up-btn{
 margin-top: 2rem;
 }
-
-/* Desktop */
-/* @media screen and (min-width: 1024px) {
-
-  .ham-burger{
-    display: none;
-  }
-  .mobile-banner-img{
-    display: none;
+ @media (max-width: 1630px){
+  .nav-container{
+    width: 102rem
   }
   .slider{
-    
-    position: relative;
-    left: 8%;
-    max-width: 70rem;
+    width: 90%;
   }
   .cuisine{
-    position: relative;
-    left: 15%;
     display: flex;
     flex-wrap: wrap;
   }
 
-  .card-section{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    position: relative;
-    left: 34%;
-  }
+ }
 
-  .footer-section{
-    width: 100%;
-  }
- 
-} */
-/* 
-@media screen and (min-width: 1860px) {
-  .nav-container{
-    width: 157rem; 
-  }
-
+ /* @media (max-width: 1300px){
   .slider{
-    max-width: 100%;
+    width: 90%;
     position: relative;
-    left: 0;
+    left: 0rem;
   }
+
   .nav-items-container{
     position: relative;
-    right: 40rem;
+    left: -20rem;
+  }
+ }
+
+ @media (min-width: 1000px){
+  .slider{
+    position: relative;
+    left: 8rem;
+    width: 100%;
   }
   .cuisine{
     position: relative;
-    left: 0;
-  }
-  .card-section{
-    position: relative;
-    left: 2rem;
-  }
-  .footer-section{
-    width: 157rem;
-  }
-  .Navbar-comp{
-    position: sticky;
-    top: 0;
+    left: 8rem;
   }
 
-} */
+  .card-section{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    position: relative;
+    left: 5rem;
+  }
+ }
+
+  */

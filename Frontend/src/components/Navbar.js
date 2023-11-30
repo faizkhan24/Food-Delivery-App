@@ -24,6 +24,7 @@ import LogoutToggle from "./LogoutToggle";
 // import MoreDropdown from "../components/MoreDropdown";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Checkout from "./Checkout";
+import Module from "./Module";
 
 export default function Navbar({ cartItems, cartItemsName }) {
   const [color, setColor] = useState(false);
@@ -266,7 +267,7 @@ export default function Navbar({ cartItems, cartItemsName }) {
               <img className="logo" src="./images/logo02.png" alt="Logo" />
             </div>
             <div className="nav-items-container">
-              <Searchbar />
+              
               
               <ul className="nav-items" style={{ marginRight: 0, gap: '3rem' }}>
 

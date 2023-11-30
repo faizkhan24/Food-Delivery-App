@@ -53,6 +53,7 @@ code {
   flex-wrap: wrap;
   justify-content: center;
   position: relative;
+  left: -7rem;
 }
 
 .background {
@@ -112,6 +113,8 @@ code {
   float: left; /* Float the columns to make them inline */
   box-sizing: border-box; /* Include padding and border in the width */
   padding: 1rem; /* Add padding as needed */
+  position: relative;
+  left: 6rem;
 }
 
 .item-heading {

@@ -14,6 +14,8 @@ import {
     cake,
   } from "../itemsData";
 import Module from './Module';
+
+import { Link } from 'react-router-dom';
 const Filter = () => {
     const [data, setData] = useState(Home);
     const [loading, setLoading] = useState(false);
@@ -98,34 +100,49 @@ const Filter = () => {
   return (
     <div>
         <div className="cuisine">
-          <button className="cuisine-btn" onClick={handleBurgerClick}>
+        <Link to={"/BurgerPage"}>
+           <button className="cuisine-btn" onClick={handleBurgerClick}>
             <img
               className="food-menu-img"
               src="./images/Burger.webp"
               alt="Burger"
             />
           </button>
-          <button className="cuisine-btn" onClick={handlePizzaClick}>
+        </Link>
+
+        <Link to={'/PizzaPage'}>
+            <button className="cuisine-btn" onClick={handlePizzaClick}>
             <img
               className="food-menu-img"
               src="./images/Pizza.webp"
               alt="Pizza"
             />
           </button>
-          <button className="cuisine-btn" onClick={handleRollsClick}>
+        </Link>
+         
+
+        <Link to={'/Rolls'}>
+            <button className="cuisine-btn" onClick={handleRollsClick}>
             <img
               className="food-menu-img"
               src="./images/Rolls.webp"
               alt="Rolls"
             />
           </button>
-          <button className="cuisine-btn" onClick={handleSouthIndClick}>
+        </Link>
+
+   <Link to={'/southInd'}>
+    <button className="cuisine-btn" onClick={handleSouthIndClick}>
             <img
               className="food-menu-img"
               src="./images/South_Indian_4.webp"
               alt="South Indian"
             />
           </button>
+   </Link>
+             
+     
+       <Link to={'/sandwich'}>
           <button className="cuisine-btn" onClick={handleSandwichClick}>
             <img
               className="food-menu-img"
@@ -133,37 +150,47 @@ const Filter = () => {
               alt="Sandwich"
             />
           </button>
-          <button className="cuisine-btn" onClick={handlePastaClick}>
+       </Link>
+        <Link to={'/pasta'}>
+            <button className="cuisine-btn" onClick={handlePastaClick}>
             <img
               className="food-menu-img"
               src="./images/Pasta.webp"
               alt="Sandwich"
             />
           </button>
-
-          <button className="cuisine-btn" onClick={handleChineseClick}>
+        </Link>
+        
+    <Link to={'/chinese'}>
+       <button className="cuisine-btn" onClick={handleChineseClick}>
             <img
               className="food-menu-img"
               src="./images/Chinese.webp"
               alt="Sandwich"
             />
           </button>
-
-          <button className="cuisine-btn" onClick={handleIceCreamClick}>
+    </Link>
+         
+<Link to={'/icecream'}>
+   <button className="cuisine-btn" onClick={handleIceCreamClick}>
             <img
               className="food-menu-img"
               src="./images/Ice_Creams.webp"
               alt="Sandwich"
             />
           </button>
-
-          <button className="cuisine-btn" onClick={handleCakeClick}>
+</Link>
+         <Link to={'/cake'}>
+           <button className="cuisine-btn" onClick={handleCakeClick}>
             <img
               className="food-menu-img"
               src="./images/Cakes.webp"
               alt="Sandwich"
             />
           </button>
+         </Link>
+
+         
         </div>
 
         {loading ? (
