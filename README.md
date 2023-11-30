@@ -30,6 +30,7 @@ Incorporation of user authentication functionality enhances security, ensuring t
 Payment Gateway Integration (Food Stripe):
 
 Integration of the Food Stripe payment gateway facilitates secure and seamless transactions, offering users a reliable payment method for their food orders.
+
 Redux Implementation:
 
 The inclusion of Redux enhances the application's state management, contributing to a more organized and efficient data flow.
