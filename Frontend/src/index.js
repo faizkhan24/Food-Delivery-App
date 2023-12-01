@@ -6,12 +6,13 @@ import reportWebVitals from './reportWebVitals';
 import { CartProvider } from './components/CartContext';
 import { Provider } from 'react-redux';
 import store from '../src/store/store';
+import { Toaster } from "react-hot-toast";
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Provider store={store}>
 
      <App />
-
+     <Toaster/>
   </Provider>
   
    

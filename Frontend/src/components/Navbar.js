@@ -262,7 +262,10 @@ export default function Navbar({ cartItems, cartItemsName }) {
         <div className="nav-container">
           <nav className="nav-bar">
             <div className="logo-container">
-              <img className="logo" src="./images/logo02.png" alt="Logo" />
+            <Link to={'/Homepage'}>
+                 <img className="logo" src="./images/logo02.png" alt="Logo" />
+            </Link>
+           
             </div>
             <div className="nav-items-container">
               <Searchbar />

@@ -6,6 +6,9 @@ import LoginModal from "../screens/LoginModal";
 import { useSelector } from "react-redux";
 import LogoutToggle from "./LogoutToggle";
 import Typed from "typed.js"; // Import Typed.js
+import "react-toastify/dist/ReactToastify.css";
+import toast from 'react-hot-toast';
+
 
 
 const LogoutPage = () => {
@@ -13,6 +16,23 @@ const LogoutPage = () => {
   const [showLoginModal, setShowLoginModal] = useState(false);
   const userState = useSelector((state) => state.loginUserReducer);
   const { currentUser } = userState;
+
+  const handleOrderNowClick = () => {
+    if (!currentUser) {
+    
+      toast.error("Please login first to place an order", {
+        position: "top-center",
+        autoClose: 3000, 
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+    } else {
+      // User is logged in, handle order logic here
+    }
+  };
 
   const handleLoginClick = () => {
     setShowRegistrationModal(true);
@@ -95,7 +115,7 @@ const LogoutPage = () => {
               className="cart-img"
               src="https://themes.templatescoder.com/pizzon/html/demo/1-2/01-Modern/images/cart-icon-white.png"
             ></img>
-            <button className="order-btn">ORDER NOW</button>
+            <button className="order-btn" onClick={handleOrderNowClick}>ORDER NOW</button>
           </div>
         </div>
         <div className="leaf-img">
