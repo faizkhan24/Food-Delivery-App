@@ -179,7 +179,7 @@ const RegisterScreen = ({ showRegistrationModal, setShowRegistrationModal }) => 
             </div>
           </div>
           <div className="registration-field">
-        <p onClick={toggleForm}>Click Here To {isRegisterForm ? "Login" : "Register"}</p>
+        <p style={{cursor: "pointer"}} onClick={toggleForm}>Click Here To {isRegisterForm ? "Login" : "Register"}</p>
         </div>
         <footer className="login-footer">
           <div className="footer-container">
