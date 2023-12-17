@@ -833,48 +833,6 @@
 margin-top: 2rem;
 }
 
-@media (max-width:412px) {
-  .nav-container{
-    width: 105rem;
-  }
-
-  .nav-items-container{
-    display: none;
-  }
-
-  .ham-burger{
-    position: relative;
-    left: 90rem;
-    top: -4rem;
-    z-index: 100;
-    font-size: 30px;
-  }
-  .cuisine{
-    position: relative;
-    left: 40rem;
-   display: grid;
-   grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
-  }
-  .card-section{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    position: relative;
-    left: 36rem;
-  }
-  .slider{
-    width: 80rem;
-    position: relative;
-    left: 15rem;
-  }
-  .footer-section{
-    width: 105rem;
-  }
-  .logo-container img{
-    position: relative;
-    left: 5rem;
-
-  }
-}
 
 
  

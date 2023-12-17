@@ -350,11 +350,11 @@ export default function Navbar({ cartItems, cartItemsName }) {
             /> */}
           </nav>
         </div>
-        <FontAwesomeIcon
+        {/* <FontAwesomeIcon
         className="ham-burger"
         icon={faBars}
         onClick={handleMobileMenuToggle}
-      />
+      /> */}
       </div>
     </>
   );
